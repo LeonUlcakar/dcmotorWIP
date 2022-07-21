@@ -142,7 +142,7 @@ void drive_motor()
   }
 
 
-  //set the direction - this is a user-defined value, adjusted for TB6612FNG driver
+  //set the direction
   if (motor_direction == -1) //-1 == CCW
   {
 	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_SPEED_LOW);
@@ -159,7 +159,7 @@ void drive_motor()
 	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_7, GPIO_SPEED_LOW);
 	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_SPEED_LOW);
 	  PWM_value = 0;
-    //In this block we also shut down the motor and set the PWM to zero
+    //set PWM to 0
   }
   //----------------------------------------------------
   //set the motor speed
